@@ -1,0 +1,142 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+
+#playerWrapper{
+    display:flex;
+    width:100%;
+    flex-wrap : wrap;
+}
+#playerHeader{
+    width:100%;
+    background-color: #aaa;
+    height:10%;
+    text-align:center;
+}
+
+#playerWithList{
+    width:75%;
+    height:80%;
+}
+#player{
+    background-color: #ccc;
+    width:100%;
+    height:80%;
+}
+#playerController{
+    background-color: #1ed760;
+    width:100%;
+    height:20%;
+}
+#controllers{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45em;
+    padding-top:1%;
+}
+#playerList{
+    background-color: #1ed760;
+    width:25%;
+    height:80%;
+}
+#playerFooter{
+    background-color: #1db954;
+    width:100%;
+    height:10%;
+    text-align:right;
+    padding-right:10%;
+    padding-top:1em;
+}
+.player-button{
+    height:1.5em;
+    width:1.5em;
+    display:inline-block;
+    margin:1em;
+    padding:1.5em;
+    border:2px solid black;
+    border-radius:2em;
+}
+#logoWrapper{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size:1.9em;
+    display: inline-block;
+}
+#login{
+    display:block;
+    float:right;
+    height:4em;
+    width:4em;
+    margin:0.5em;
+    border-radius:4em;
+    display:flex;
+    align-items: center;
+    background-color: #1ed760;
+}
+#loginImg{
+    width:2em;
+    height:2em;
+    margin-left:auto;
+    margin-right:auto;
+}
+.svg-logo{
+    height:2em;
+    width:2em;
+}
+.player-button:hover{
+    border:2px solid #189644;
+}
+.player-button:active{
+    height:1.7em;
+    width:1.7em;
+    transition:all 0.1s;
+}
+.player-img{
+    height:350px;
+    width:350px;
+    margin-top:3vw;
+    margin-left:25vw;
+}
+
+.play-list{
+    display:block;
+    width: 98%;
+    height: 16%;
+    margin:1%;
+
+    background-color: white;
+}
+.video-source{
+    width: 100%;
+    height:100%;
+    display:none;
+}
+span{
+    display:inline-block;
+    margin-left:-1em;
+}
+
+@media (max-width:376px){
+    #playerHeader{
+        width:100%;
+        height:2%;
+    }
+    #player{
+        width:100%;
+        height:86%;
+    }
+    #playerController{
+        height:10%;
+        width:100%;
+    }
+    #playerFooter{
+        height:2%;
+        width:100%;
+    }
+    #playerList{
+        display:none;
+    }
+}

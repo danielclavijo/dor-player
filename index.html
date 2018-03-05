@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div id="playerWrapper">
+        <div id="playerHeader">
+            <div id="logoWrapper">
+                <img src="img/logo.svg" class="svg-logo">
+                <span>DaniPlayer</span>
+            </div>
+            <div id="login"><img src="img/user.svg" id="loginImg"></div>
+        </div>
+        <div id="playerWithList">
+            <div id=player>
+                <video class="video-source" id="video">
+                    <source src="src/video.mp4" type="video/mp4">
+                    <!--<track kind="subtitles" srclang="es" label="Español" src="src/subtitles.vtt" default />-->
+                </video>
+                <video class="video-source" id="video2">
+                    <source src="src/video2.mp4" type="video/mp4">
+                </video>
+
+            </div>
+            <div id="playerController">
+                <div id="controllers">
+                    <img src="img/previous.svg" class="player-button" id="previous">
+                    <img src="img/backwards.svg" class="player-button" id="backwards">
+                    <img src="img/pause.svg" class="player-button" id="play">
+                    <img src="img/forward.svg" class="player-button" id="forward">
+                    <img src="img/next.svg" class="player-button" id="next">
+                    <input type="range" id="player-volume" value="5">
+                </div>
+
+            </div>
+        </div>
+        <div id="playerList">
+            <div class="play-list"></div>
+            <div class="play-list"></div>
+            <div class="play-list"></div>
+            <div class="play-list"></div>
+            <div class="play-list"></div>
+            <div class="play-list"></div>
+        </div>
+        <div id="playerFooter"><img src="img/license.svg"></div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
