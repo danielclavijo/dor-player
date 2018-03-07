@@ -166,7 +166,7 @@ function prevSong(){
 }
 
 function changeThumbnail(){
-    $("#image").attr("src","thumbnails/" + namePlaying.slice(0, namePlaying.length-4) +".png");
+    $("#image").attr("src","thumbnails/" + namePlaying.slice(0, namePlaying.length-4) +".PNG");
 }
 
 function changeVolume(){
