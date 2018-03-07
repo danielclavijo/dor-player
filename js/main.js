@@ -25,7 +25,7 @@ $(document).ready(function(){
             nextSong();
     },500);
 
-    $("#player").append("<img class='player-img' id='image' src='thumbnails/" + namePlaying.slice(0, namePlaying.length-4) +".png'>");
+    $("#player").append("<img class='player-img' id='image' src='thumbnails/" + namePlaying.slice(0, namePlaying.length-4) +".PNG'>");
 
     $("#play").click(function(){playPause();});
     $("#backwards").click(function(){
