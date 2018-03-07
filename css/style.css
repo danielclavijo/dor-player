@@ -131,7 +131,9 @@ span{
     display:inline-block;
     margin-left:-1.5em;
 }
-
+#license{
+    margin-top:-1.5%;
+}
 @media (max-width:376px){
     #playerHeader{
         width:100%;
