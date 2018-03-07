@@ -1,4 +1,4 @@
-var audioSource = ["goosebumps.mp3","video.mp4","Lovesick (Ft. ASAP Rocky).mp3","video2.mp4","Redbone.mp3","Slide (feat. Frank Ocean & Migos).mp3"];
+var audioSource = ["goosebumps.mp3","Lovesick (Ft. ASAP Rocky).mp3","Redbone.mp3","Slide (feat. Frank Ocean & Migos).mp3","video.mp4","video2.mp4"];
 var audios = [];
 var nowPlaying;
 var namePlaying = "";
@@ -48,6 +48,33 @@ $(document).ready(function(){
     $("#previous").click(function(){prevSong();});
 
     $("#player-volume").change(function(){changeVolume();});
+
+
+    $(".play-list").click(function(){
+        nowPlaying.pause();
+        var name = $(this).attr('id');
+
+        $("#play").attr('src', 'img/pause.svg');
+        pauseStatus = "playing";
+        $("video").hide();
+
+        namePlaying = name;
+        positionPlaying = audioSource.indexOf(namePlaying);
+
+        if(namePlaying.slice(-3) == "mp3"){
+            changeThumbnail();
+            nowPlaying = audios[positionPlaying];
+            $("#image").show();
+        } else{
+            $("#image").hide();
+            nowPlaying = document.getElementById(name.substring(0, name.length - 4));
+            $("#" + name.substring(0, name.length - 4)).show();
+        }
+
+        changeVolume();
+        nowPlaying.currentTime = 0;
+        nowPlaying.play();
+    });
 });
 
 function playPause(){
@@ -149,5 +176,5 @@ function changeVolume(){
         volume = '0' + volume;
 
     nowPlaying.volume = '0.' + volume;
-
 }
+
